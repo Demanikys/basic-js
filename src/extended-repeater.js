@@ -3,8 +3,6 @@ const CustomError = require("../extensions/custom-error");
 module.exports = function repeater(str, options) {
   let result = []
   let tempStr = []
-  console.log(str)
-  console.log(options)
   if (str === null) {
     str = 'null'
   }
@@ -23,7 +21,6 @@ module.exports = function repeater(str, options) {
   }
   separator = separator.join(options.additionSeparator)
   tempStr = `${str}${separator}`
-  // tempStr.push(separator)
   console.log(separator)
   for (let i = 0; i < options.repeatTimes; i++) {
     result.push(tempStr)
